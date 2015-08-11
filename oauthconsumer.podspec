@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage                = 'https://github.com/imjerrybao/oauthconsumer'
   s.source                  = { :git => 'https://github.com/imjerrybao/oauthconsumer.git', :tag => "v#{s.version.to_s}" }
   s.public_header_files     = '*.h'
-  s.source_files            = '*.{h,m,c}'
+  s.source_files            = '*.{h,m}, Categories/*.{h,m}, Crypto/*.{h,c}'
   s.ios.frameworks          = 'Security'
   s.libraries               = 'xml2'
   s.requires_arc            = false
