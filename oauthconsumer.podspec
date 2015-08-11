@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license                 = { :type => 'MIT', :file => 'LICENSE' }
   s.author                  = { 'Jerry' => 'imjerrybao@gmail.com' }
   s.source                  = { :git => 'https://github.com/imjerrybao/oauthconsumer.git', :tag => "v#{s.version.to_s}" }
-  s.public_header_files     = ['*.h', 'Categories/*.h']
+  s.public_header_files     = '*.h'
   s.source_files            = ['*.{h,m}', 'Crypto/*.{h,c}']
   s.ios.frameworks          = 'Security'
   s.libraries               = 'xml2'
