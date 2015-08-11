@@ -27,14 +27,16 @@
 
 
 @implementation OAConsumer
-@synthesize key, secret;
+@synthesize key, secret,realm;
 
 #pragma mark init
 
-- (id)initWithKey:(NSString *)aKey secret:(NSString *)aSecret {
+- (id)initWithKey:(NSString *)aKey secret:(NSString *)aSecret realm:(NSString *)aRealm {
 	if ((self = [super init])) {
 		self.key = aKey;
 		self.secret = aSecret;
+            self.realm = aRealm ;
+        
 	}
 	return self;
 }
@@ -54,7 +56,9 @@
 
 - (BOOL)isEqualToConsumer:(OAConsumer *)aConsumer {
 	return ([self.key isEqualToString:aConsumer.key] &&
-			[self.secret isEqualToString:aConsumer.secret]);
+			[self.secret isEqualToString:aConsumer.secret] &&
+                        [self.realm isEqualToString:aConsumer.realm]
+            );
 }
 
 @end

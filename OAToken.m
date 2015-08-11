@@ -52,6 +52,21 @@
 				  attributes:nil created:nil renewable:NO];
 }
 
+- (void)setVerifierWithUrl:(NSURL *)aURL
+{
+    NSString *query = [aURL query];
+    NSArray *pairs = [query componentsSeparatedByString:@"&"];
+    
+	for (NSString *pair in pairs)
+    {
+        NSArray *elements = [pair componentsSeparatedByString:@"="];
+        if ([[elements objectAtIndex:0] isEqualToString:@"oauth_verifier"])
+        {
+            self.verifier = [elements objectAtIndex:1];
+        }
+    }
+}
+
 - (id)initWithKey:(NSString *)aKey secret:(NSString *)aSecret session:(NSString *)aSession
 		 duration:(NSNumber *)aDuration attributes:(NSDictionary *)theAttributes created:(NSDate *)creation
 		renewable:(BOOL)renew {
