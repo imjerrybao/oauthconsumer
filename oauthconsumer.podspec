@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.ios.deployment_target   = '6.0'
-  s.name                    = 'oauthconsumer'
+  s.name                    = 'OAuthconsumer'
   s.version                 = '0.1.0'
   s.summary                 = 'An iPhone ready, Objective-C implementation of an OAuth consumer.'
   s.homepage                = 'https://github.com/imjerrybao/oauthconsumer'
   s.license                 = { :type => 'MIT', :file => 'LICENSE' }
   s.author                  = { 'Jerry' => 'imjerrybao@gmail.com' }
   s.source                  = { :git => 'https://github.com/imjerrybao/oauthconsumer.git', :tag => "v#{s.version.to_s}" }
-  s.public_header_files     = '*.h'
+  s.public_header_files     = 'OAConsumer.h'
   s.source_files            = ['*.{h,m}', 'Crypto/*.{h,c}']
   s.ios.frameworks          = 'Security'
   s.libraries               = 'xml2'
