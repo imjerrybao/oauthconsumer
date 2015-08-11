@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.ios.deployment_target   = '6.0'
-  s.name                    = 'OAuthconsumer'
+  s.name                    = 'oauthconsumer'
   s.version                 = '0.1.0'
   s.summary                 = 'An iPhone ready, Objective-C implementation of an OAuth consumer.'
   s.homepage                = 'https://github.com/imjerrybao/oauthconsumer'
